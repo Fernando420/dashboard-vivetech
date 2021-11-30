@@ -3,6 +3,11 @@
     %div.card
       %div.row
         %div.col-4.p-2
+          %h5= t('common_texts.order#')
+          %h5 :
+          %h5= @product['order_id']
+
+        %div.col-4.p-2
           %h5= t('common_texts.name')
           %h5 :
           %h5= @product['name']
@@ -13,15 +18,9 @@
           %h5= @product['description']
         
         %div.col-4.p-2
-          - if @product['sold']
-            %h5= t('common_texts.date_create')
-            %h5 :
-            %h5= DateTime.parse(@product['sold_date']).strftime('%Y-%m-%d %H:%M')
-        
-        %div.col-4.p-2
-          %h5= t('common_texts.status')
+          %h5= t('common_texts.date_create')
           %h5 :
-          %h5= t("status.#{@product['status']}")
+          %h5= DateTime.parse(@product['created_at']).strftime('%Y-%m-%d %H:%M')
 
         %div.col-12.p-2
           %div

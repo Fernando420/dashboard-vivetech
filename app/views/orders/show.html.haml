@@ -1,0 +1,50 @@
+%div.container
+  %div.row
+    %div.card
+      %div.row
+        %div.col-4.p-2
+          %h5= t('common_texts.order#')
+          %h5 :
+          %h5= @order['id']
+
+        %div.col-4.p-2
+          %h5= t('common_texts.correct')
+          %h5 :
+          %h5= @order['correct']
+         
+        %div.col-4.p-2
+          %h5= t('common_texts.incorrect')
+          %h5 :
+          %h5= @order['incorrect']
+        
+        %div.col-4.p-2
+          %h5= t('common_texts.total')
+          %h5 :
+          %h5= @order['total']
+        
+        %div.col-4.p-2
+          %h5= t('common_texts.date_create')
+          %h5 :
+          %h5= DateTime.parse(@order['created_at']).strftime('%Y-%m-%d %H:%M')
+
+        %div.col-12.p-2
+          %div
+            %h2= t('common_texts.products')
+          %div.col-12
+            - @order['products'].each do |product|
+              %div.variants
+                %div.col-4.p-2
+                  %h5= t('common_texts.name')
+                  %h5 :
+                  %h5= product['name']
+    
+                %div.col-4.p-2
+                  %h5= t('common_texts.description')
+                  %h5 :
+                  %h5= product['description']
+
+                %div.col-4.p-2
+                  %a.link-table{href: "/products/#{product['id']}"}=t('buttons.show')
+        
+        %div.links.col-10.pt-4
+          %a.btn.btn-link{href: "/products"}= t('sales.inputs.back')

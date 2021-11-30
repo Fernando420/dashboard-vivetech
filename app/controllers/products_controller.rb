@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def add_variant
-    @variant = {name: '', desciption: ''}
+    @variant = {name: '', price: ''}
   end
 
   def index

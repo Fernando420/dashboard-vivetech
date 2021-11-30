@@ -1,0 +1,37 @@
+.del_product{id: "product_#{child_index}"}  
+  .m-1.p-1.border.rounded.box
+    %div.row
+      %div.form-group.col-4
+        %strong#error-name.error-msg
+          = text_field_tag 'data[][name]',nil, {class: 'form-input', required: true,id:"name"}
+          %label.form-label{for: "name"}= t('common_texts.name')
+          %p#text-name.hide= t('errors.name')
+    
+      %div.form-group.col-4
+        %strong#error-description.error-msg
+          = text_field_tag 'data[][description]',nil, {class: 'form-input', required: true,id:"description"}
+          %label.form-label{for: "description"}= t('common_texts.description')
+          %p#text-description.hide= t('errors.description')
+
+      %b
+        %a.delete_product{data: {div_id: "product_#{child_index}"}}
+          =image_tag('icons/delete.png')
+
+      %div.col-12.pt-4{style: 'margin-left: 20px'}
+        %h3 Variants
+        #div{id: "variant_#{child_index}"}
+
+        %div.col-12.pt-5
+          %a.btn.btn-primary{style: 'color: white;padding: 1px;',id: "bvariant_#{child_index}"} Add Variant
+
+:javascript
+
+  $('.delete_product').on('click', function(){
+    var div_id = $(this).data('div-id');
+    $("#" + div_id).remove();
+  });
+
+  $("#bvariant_#{child_index}").on('click', function(){
+    var url = "#{add_variant_orders_url}"; 
+    $.get( url+"?product_index=#{child_index}" );
+  })

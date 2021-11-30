@@ -32,6 +32,21 @@
                     = image_tag 'sidebar/dot-gray.png', class: 'sidebar-button-bullet'
                     %strong= t('sidebar.menu_2.submenu_2')
 
+            %li{style: "margin-top:10px;"}
+              %a.dropdown-toggle.sidebar-button.link-home{href: "#Order", 'data-toggle': "collapse", 'aria-expanded': "false"}
+                = image_tag 'sidebar/product.png', class: 'sidebar-button-img'
+                %strong= t('sidebar.menu_3.title')
+                  
+              %ul#Order.collapse.list-unstyled
+                %li
+                  %a#register.sidebar-button.link-home{href: "/orders/new"}
+                    = image_tag 'sidebar/dot-gray.png', class: 'sidebar-button-bullet'
+                    %strong= t('sidebar.menu_3.submenu_1')      
+                %li
+                  %a#list.sidebar-button.link-home{href: "/orders"}
+                    = image_tag 'sidebar/dot-gray.png', class: 'sidebar-button-bullet'
+                    %strong= t('sidebar.menu_3.submenu_2')
+
 
           %li.only{style: "margin-top:400px;"}
   

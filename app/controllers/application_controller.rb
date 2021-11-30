@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
     def valid_token
       flag = false
       if !@current_user.nil?
-        response = ApiVivetech::get_products(@current_user['token'])
+        response = ApiVivetech::validate_token(@current_user['token'])
         if response['errors']
           Redis.current.del("login-#{@token_session}")
           redirect_to login_sessions_path()

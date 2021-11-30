@@ -1,0 +1,8 @@
+%tr
+  %td= order['id']
+  %td= t("status.#{order['status']}")
+  %td= order['correct']
+  %td= order['incorrect']
+  %td= order['total']
+  %td
+    %a.link-table{href: "/orders/#{order['id']}"}=t('buttons.show') 

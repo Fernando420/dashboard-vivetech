@@ -1,0 +1,11 @@
+%table.table.responsive.text-center{id: 'table_desing'}
+  %thead
+    %th=t('common_texts.id')
+    %th=t('common_texts.status')
+    %th=t('common_texts.correct')
+    %th=t('common_texts.incorrect')
+    %th=t('common_texts.total')
+    %th=t('buttons.show')
+  %tbody
+    - if @orders.any?
+      = render partial: 'orders/order', collection: @orders

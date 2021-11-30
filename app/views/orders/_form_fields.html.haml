@@ -1,0 +1,20 @@
+
+%div.col-12.pt-4
+  %h3 Products
+  #products
+
+%div.col-12.pt-5
+  %a#bproduct.btn.btn-primary{style: 'color: white;padding: 1px;'} Add Product
+
+%div.links.col-6.pt-4
+  %a.btn.btn-link{href: "/products"}= t('buttons.back')
+
+%div.button.col-6.pt-4
+  %button.btn.btn-login= t('buttons.save')
+
+:javascript
+
+  $('#bproduct').on('click', function(){
+    var url = "#{add_product_orders_url}";
+    $.get( url ); 
+  })

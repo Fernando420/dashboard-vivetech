@@ -1,0 +1,4 @@
+-id = SecureRandom.uuid.to_s[0,8]
+=render partial: 'variant', locals: {child_index: id, variant: @variant}
+
+

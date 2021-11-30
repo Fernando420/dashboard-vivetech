@@ -3,13 +3,13 @@
     %div.row
       %div.form-group.col-4
         %strong#error-name.error-msg
-          = text_field_tag 'variants[][name]',nil, {class: 'form-input', required: true,id:"name"}
+          = text_field_tag 'data[][variants][][name]',nil, {class: 'form-input', required: true,id:"name"}
           %label.form-label{for: "name"}= t('common_texts.name')
           %p#text-name.hide= t('errors.name')
     
       %div.form-group.col-4
         %strong#error-price.error-msg
-          = number_field_tag 'variants[][price]',nil, {class: 'form-input', required: true,id:"price", step: 0.0001}
+          = number_field_tag 'data[][variants][][price]',nil, {class: 'form-input', required: true,id:"price", step: 0.0001}
           %label.form-label{for: "price"}= t('common_texts.price')
           %p#text-price.hide= t('errors.price')
 
@@ -20,6 +20,7 @@
 :javascript
 
   $('.delete_variant').on('click', function(){
+    console.log('entreo')
     var div_id = $(this).data('div-id');
     $("#" + div_id).remove();
   });

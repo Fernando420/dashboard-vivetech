@@ -3,7 +3,11 @@ es:
     menu_1: 
       title: 'Inicio'
     menu_2: 
-      title: "Producto"
+      title: "Productos"
+      submenu_1: 'Registrar'
+      submenu_2: 'Listar'
+    menu_3: 
+      title: "Ordenes"
       submenu_1: 'Registrar'
       submenu_2: 'Listar'
   common_texts:
@@ -17,9 +21,12 @@ es:
     processing: 'Procesado'
   products:
     new: 'Nuevo Producto'
-    edit: 'Editar Productos'
     list: 'Listar Producto'
     show: 'Ver Producto'
+  orders:
+    new: 'Nuevo Orden'
+    list: 'Listar Orden'
+    show: 'Ver Orden'
   login:
     privacy: 'Política de privacidad y términos legales'
     faq: 'FAQ`s'

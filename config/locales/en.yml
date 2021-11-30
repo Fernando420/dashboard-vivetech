@@ -3,7 +3,11 @@ en:
     menu_1: 
       title: 'Home'
     menu_2: 
-      title: "Product"
+      title: "Products"
+      submenu_1: 'Register'
+      submenu_2: 'List'
+    menu_3: 
+      title: "Orders"
       submenu_1: 'Register'
       submenu_2: 'List'
   common_texts:
@@ -16,9 +20,12 @@ en:
     processing: 'Processing'
   products:
     new: 'New Product'
-    edit: 'Edit Products'
     list: 'List Product'
     show: 'Show Product'
+  orders:
+    new: 'New Order'
+    list: 'List Order'
+    show: 'Show Order'
   login:
     privacy: 'Privacy policy and legal terms'
     faq: 'FAQ`s'

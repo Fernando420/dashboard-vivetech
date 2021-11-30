@@ -16,4 +16,11 @@ Rails.application.routes.draw do
       get :add_variant
     end
   end
+
+  resources :orders do
+    collection do
+      get :add_product
+      get :add_variant
+    end
+  end
 end
