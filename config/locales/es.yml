@@ -1,0 +1,51 @@
+es:
+  sidebar:
+    menu_1: 
+      title: 'Inicio'
+    menu_2: 
+      title: "Producto"
+      submenu_1: 'Registrar'
+      submenu_2: 'Listar'
+  common_texts:
+    home: 'Inicio'
+    name: 'Nombre'
+    description: 'Descripcion'
+    date_create: 'Fecha de Creacion'
+    variants: 'Variantes'
+  status: 
+    process: 'En proceso'
+    processing: 'Procesado'
+  products:
+    new: 'Nuevo Producto'
+    edit: 'Editar Productos'
+    list: 'Listar Producto'
+    show: 'Ver Producto'
+  login:
+    privacy: 'Política de privacidad y términos legales'
+    faq: 'FAQ`s'
+    title: 'Sistema de Gestión de Gimnasio'
+    forgot-password: 'Olvide contraseña?'
+  buttons: 
+    save: 'Guardar'
+    back: 'Atras'
+    continue: 'Continuar'
+    show: 'Ver'
+    edit: 'Editar'
+    valid: "Validar?"
+    access: "Dar Acceso"
+    search: "Buscar"
+    delete: 'Eliminar'
+    generate: 'Generar'
+  modals:
+    success: 'Exitosamente'
+    access: 'Accesso'
+    error: "Error"
+    confirm: "Confirmacion"
+    sale: 'Confirmar Venta'
+  errors:
+    username: 'Ingrese un username valido'
+    password: 'Mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'
+    email: 'Ingrese un email valido'
+    phone: 'Ingrese una telefono valida, la telefono debe de contener solo numeros'
+    age: 'Ingrese una edad valida, la edad debe de contener solo numeros'
+    confirmPassword: "La contraseña y la contraseña de confirmación deben ser iguales"

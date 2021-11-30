@@ -1,0 +1,43 @@
+%div.container
+  %div.row
+    %div.card
+      %div.row
+        %div.col-4.p-2
+          %h5= t('common_texts.name')
+          %h5 :
+          %h5= @product['name']
+         
+        %div.col-4.p-2
+          %h5= t('common_texts.description')
+          %h5 :
+          %h5= @product['description']
+        
+        %div.col-4.p-2
+          - if @product['sold']
+            %h5= t('common_texts.date_create')
+            %h5 :
+            %h5= DateTime.parse(@product['sold_date']).strftime('%Y-%m-%d %H:%M')
+        
+        %div.col-4.p-2
+          %h5= t('common_texts.status')
+          %h5 :
+          %h5= t("status.#{@product['status']}")
+
+        %div.col-12.p-2
+          %div
+            %h2= t('common_texts.variants')
+          %div.col-12
+            - @product['variants'].each do |variant|
+              %div.variants
+                %div.col-6.p-2
+                  %h5= t('common_texts.name')
+                  %h5 :
+                  %h5= variant['name']
+    
+                %div.col-6.p-2
+                  %h5= t('common_texts.price')
+                  %h5 :
+                  %h5= number_to_currency(variant['price'])
+        
+        %div.links.col-10.pt-4
+          %a.btn.btn-link{href: "/products"}= t('sales.inputs.back')

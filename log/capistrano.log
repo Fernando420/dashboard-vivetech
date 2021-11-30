@@ -1,0 +1,333 @@
+# Logfile created on 2021-11-18 23:47:17 -0600 by logger.rb/v1.4.2
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-11-18 23:47:17 -0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6acbf5fb] Running [ -d ~/.rvm ] on 3.83.40.117
+ DEBUG [6acbf5fb] Command: [ -d ~/.rvm ]
+ DEBUG [6acbf5fb] Finished in 1.565 seconds with exit status 0 (successful).
+ DEBUG [5fb0ff69] Running ~/.rvm/bin/rvm version on 3.83.40.117
+ DEBUG [5fb0ff69] Command: ~/.rvm/bin/rvm version
+ DEBUG [5fb0ff69] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [5fb0ff69] 	
+ DEBUG [5fb0ff69] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [de4ce313] Running ~/.rvm/bin/rvm current on 3.83.40.117
+ DEBUG [de4ce313] Command: ~/.rvm/bin/rvm current
+ DEBUG [de4ce313] 	ruby-2.7.0
+ DEBUG [de4ce313] 	
+ DEBUG [de4ce313] Finished in 0.412 seconds with exit status 0 (successful).
+ DEBUG [d65a6b50] Running ~/.rvm/bin/rvm default do ruby --version on 3.83.40.117
+ DEBUG [d65a6b50] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [d65a6b50] 	ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ DEBUG [d65a6b50] 	
+ DEBUG [d65a6b50] Finished in 0.526 seconds with exit status 0 (successful).
+  INFO [8d4d76a0] Running /usr/bin/env mkdir -p /tmp on 3.83.40.117
+ DEBUG [8d4d76a0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8d4d76a0] Finished in 0.224 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-f79c3214e3421482c53b.sh 0.0%
+  INFO Uploading /tmp/git-ssh-f79c3214e3421482c53b.sh 100.0%
+  INFO [c439ace8] Running /usr/bin/env chmod 700 /tmp/git-ssh-f79c3214e3421482c53b.sh on 3.83.40.117
+ DEBUG [c439ace8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-f79c3214e3421482c53b.sh
+  INFO [c439ace8] Finished in 0.196 seconds with exit status 0 (successful).
+  INFO [9519133f] Running /usr/bin/env git ls-remote git@github.com:Fernando420/Panel-Access.git HEAD on 3.83.40.117
+ DEBUG [9519133f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f79c3214e3421482c53b.sh" ; /usr/bin/env git ls-remote git@github.com:Fernando420/Panel-Access.git HEAD )
+ DEBUG [9519133f] 	7e60baaf0ae5f38d9622c0c5090f590fb8d0adbc
+ DEBUG [9519133f] 		
+ DEBUG [9519133f] 	HEAD
+  INFO [9519133f] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [76694e6a] Running /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/shared /home/ubuntu/apps/dashboard-gym/releases on 3.83.40.117
+ DEBUG [76694e6a] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/shared /home/ubuntu/apps/dashboard-gym/releases
+  INFO [76694e6a] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [e8d90a8e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/shared/public/assets on 3.83.40.117
+ DEBUG [e8d90a8e] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/shared/public/assets
+  INFO [e8d90a8e] Finished in 0.192 seconds with exit status 0 (successful).
+ DEBUG [daf85ba2] Running [ -f /home/ubuntu/apps/dashboard-gym/shared/puma.rb ] on 3.83.40.117
+ DEBUG [daf85ba2] Command: [ -f /home/ubuntu/apps/dashboard-gym/shared/puma.rb ]
+ DEBUG [daf85ba2] Finished in 0.234 seconds with exit status 0 (successful).
+ DEBUG [0a991049] Running [ -f /home/ubuntu/apps/dashboard-gym/current/REVISION ] on 3.83.40.117
+ DEBUG [0a991049] Command: [ -f /home/ubuntu/apps/dashboard-gym/current/REVISION ]
+ DEBUG [0a991049] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [9ce54366] Running /usr/bin/env cat /home/ubuntu/apps/dashboard-gym/current/REVISION 2>/dev/null on 3.83.40.117
+ DEBUG [9ce54366] Command: /usr/bin/env cat /home/ubuntu/apps/dashboard-gym/current/REVISION 2>/dev/null
+ DEBUG [9ce54366] 	29e28f3c4dcc7e5c61ec74bbb242ac8817502ae8
+ DEBUG [9ce54366] 	
+ DEBUG [9ce54366] Finished in 0.253 seconds with exit status 0 (successful).
+ DEBUG [8f53f3c9] Running [ -f /home/ubuntu/apps/dashboard-gym/repo/HEAD ] on 3.83.40.117
+ DEBUG [8f53f3c9] Command: [ -f /home/ubuntu/apps/dashboard-gym/repo/HEAD ]
+ DEBUG [8f53f3c9] Finished in 0.195 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/dashboard-gym/repo
+ DEBUG [43ab8699] Running if test ! -d /home/ubuntu/apps/dashboard-gym/repo; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/repo'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [43ab8699] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/repo; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/repo'" 1>&2; false; fi
+ DEBUG [43ab8699] Finished in 0.232 seconds with exit status 0 (successful).
+  INFO [5c8f8c6f] Running /usr/bin/env git remote set-url origin git@github.com:Fernando420/Panel-Access.git on 3.83.40.117
+ DEBUG [5c8f8c6f] Command: cd /home/ubuntu/apps/dashboard-gym/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f79c3214e3421482c53b.sh" ; /usr/bin/env git remote set-url origin git@github.com:Fernando420/Panel-Access.git )
+  INFO [5c8f8c6f] Finished in 0.202 seconds with exit status 0 (successful).
+  INFO [5f83a642] Running /usr/bin/env git remote update --prune on 3.83.40.117
+ DEBUG [5f83a642] Command: cd /home/ubuntu/apps/dashboard-gym/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f79c3214e3421482c53b.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5f83a642] 	Fetching origin
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	remote: Enumerating objects: 11, done.[K
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	remote: Counting objects:   9% (1/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  18% (2/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  27% (3/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  36% (4/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  45% (5/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  54% (6/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  63% (7/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  72% (8/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  81% (9/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects:  90% (10/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects: 100% (11/11)[K
+ DEBUG [5f83a642] 	remote: Counting objects: 100% (11/11), done.[K
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	remote: Compressing objects:  33% (1/3)[K
+ DEBUG [5f83a642] 	remote: Compressing objects:  66% (2/3)[K
+ DEBUG [5f83a642] 	remote: Compressing objects: 100% (3/3)[K
+ DEBUG [5f83a642] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	remote: Total 6 (delta 3), reused 6 (delta 3), pack-reused 0[K
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	Unpacking objects:  16% (1/6)
+ DEBUG [5f83a642] 	Unpacking objects:  33% (2/6)
+ DEBUG [5f83a642] 	Unpacking objects:  50% (3/6)
+ DEBUG [5f83a642] 	Unpacking objects:  66% (4/6)
+ DEBUG [5f83a642] 	Unpacking objects:  83% (5/6)
+ DEBUG [5f83a642] 	Unpacking objects: 100% (6/6)
+ DEBUG [5f83a642] 	Unpacking objects: 100% (6/6), 609 bytes | 7.00 KiB/s, done.
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	From github.com:Fernando420/Panel-Access
+ DEBUG [5f83a642] 	
+ DEBUG [5f83a642] 	   29e28f3..7e60baa  master     -> master
+ DEBUG [5f83a642] 	
+  INFO [5f83a642] Finished in 0.736 seconds with exit status 0 (successful).
+ DEBUG [2dba071a] Running if test ! -d /home/ubuntu/apps/dashboard-gym/repo; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/repo'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [2dba071a] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/repo; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/repo'" 1>&2; false; fi
+ DEBUG [2dba071a] Finished in 0.235 seconds with exit status 0 (successful).
+  INFO [609abddd] Running /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/releases/20211119054722 on 3.83.40.117
+ DEBUG [609abddd] Command: cd /home/ubuntu/apps/dashboard-gym/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f79c3214e3421482c53b.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/releases/20211119054722 )
+  INFO [609abddd] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [90e04f06] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/dashboard-gym/releases/20211119054722 on 3.83.40.117
+ DEBUG [90e04f06] Command: cd /home/ubuntu/apps/dashboard-gym/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f79c3214e3421482c53b.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/dashboard-gym/releases/20211119054722 )
+  INFO [90e04f06] Finished in 0.265 seconds with exit status 0 (successful).
+ DEBUG [375942cb] Running if test ! -d /home/ubuntu/apps/dashboard-gym/repo; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/repo'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [375942cb] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/repo; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/repo'" 1>&2; false; fi
+ DEBUG [375942cb] Finished in 0.191 seconds with exit status 0 (successful).
+ DEBUG [0cf66dd6] Running /usr/bin/env git rev-list --max-count=1 master on 3.83.40.117
+ DEBUG [0cf66dd6] Command: cd /home/ubuntu/apps/dashboard-gym/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f79c3214e3421482c53b.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [0cf66dd6] 	7e60baaf0ae5f38d9622c0c5090f590fb8d0adbc
+ DEBUG [0cf66dd6] 	
+ DEBUG [0cf66dd6] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [0a07a8d8] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [0a07a8d8] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi
+ DEBUG [0a07a8d8] Finished in 0.192 seconds with exit status 0 (successful).
+  INFO [91d1be6b] Running /usr/bin/env echo "7e60baaf0ae5f38d9622c0c5090f590fb8d0adbc" > REVISION on 3.83.40.117
+ DEBUG [91d1be6b] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && /usr/bin/env echo "7e60baaf0ae5f38d9622c0c5090f590fb8d0adbc" > REVISION
+  INFO [91d1be6b] Finished in 0.238 seconds with exit status 0 (successful).
+  INFO [3e23a22c] Running /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public on 3.83.40.117
+ DEBUG [3e23a22c] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public
+  INFO [3e23a22c] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [fd4c9767] Running [ -L /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets ] on 3.83.40.117
+ DEBUG [fd4c9767] Command: [ -L /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets ]
+ DEBUG [fd4c9767] Finished in 0.234 seconds with exit status 1 (failed).
+ DEBUG [6fde63dd] Running [ -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets ] on 3.83.40.117
+ DEBUG [6fde63dd] Command: [ -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets ]
+ DEBUG [6fde63dd] Finished in 0.192 seconds with exit status 1 (failed).
+  INFO [1d145557] Running /usr/bin/env ln -s /home/ubuntu/apps/dashboard-gym/shared/public/assets /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets on 3.83.40.117
+ DEBUG [1d145557] Command: /usr/bin/env ln -s /home/ubuntu/apps/dashboard-gym/shared/public/assets /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets
+  INFO [1d145557] Finished in 0.237 seconds with exit status 0 (successful).
+ DEBUG [cd94e2f0] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [cd94e2f0] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi
+ DEBUG [cd94e2f0] Finished in 0.191 seconds with exit status 0 (successful).
+  INFO [7aa267eb] Running ~/.rvm/bin/rvm default do bundle config --local deployment true on 3.83.40.117
+ DEBUG [7aa267eb] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && ~/.rvm/bin/rvm default do bundle config --local deployment true
+  INFO [7aa267eb] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [569094fa] Running ~/.rvm/bin/rvm default do bundle config --local path /home/ubuntu/apps/dashboard-gym/shared/bundle on 3.83.40.117
+ DEBUG [569094fa] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && ~/.rvm/bin/rvm default do bundle config --local path /home/ubuntu/apps/dashboard-gym/shared/bundle
+  INFO [569094fa] Finished in 0.791 seconds with exit status 0 (successful).
+  INFO [4b8a82e2] Running ~/.rvm/bin/rvm default do bundle config --local without development:test on 3.83.40.117
+ DEBUG [4b8a82e2] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && ~/.rvm/bin/rvm default do bundle config --local without development:test
+  INFO [4b8a82e2] Finished in 0.824 seconds with exit status 0 (successful).
+ DEBUG [846111c1] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [846111c1] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi
+ DEBUG [846111c1] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [55d32955] Running ~/.rvm/bin/rvm default do bundle check on 3.83.40.117
+ DEBUG [55d32955] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && ~/.rvm/bin/rvm default do bundle check
+ DEBUG [55d32955] 	The Gemfile's dependencies are satisfied
+ DEBUG [55d32955] 	
+ DEBUG [55d32955] Finished in 1.048 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [7aadadbd] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [7aadadbd] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi
+ DEBUG [7aadadbd] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO [deb2b48b] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 3.83.40.117
+ DEBUG [deb2b48b] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [deb2b48b] 	Yarn executable was not detected in the system.
+ DEBUG [deb2b48b] 	
+ DEBUG [deb2b48b] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [deb2b48b] 	
+  INFO [deb2b48b] Finished in 31.666 seconds with exit status 0 (successful).
+ DEBUG [c16e95b0] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [c16e95b0] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi
+ DEBUG [c16e95b0] Finished in 0.304 seconds with exit status 0 (successful).
+  INFO [5df6d4a9] Running /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/releases/20211119054722/assets_manifest_backup on 3.83.40.117
+ DEBUG [5df6d4a9] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && /usr/bin/env mkdir -p /home/ubuntu/apps/dashboard-gym/releases/20211119054722/assets_manifest_backup
+  INFO [5df6d4a9] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [319a5e11] Running /usr/bin/env ls /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest* on 3.83.40.117
+ DEBUG [319a5e11] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && /usr/bin/env ls /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest*
+ DEBUG [319a5e11] 	/home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest-53d0d81093336b93bc8c974418c1d533.json
+ DEBUG [319a5e11] 	
+ DEBUG [319a5e11] Finished in 0.306 seconds with exit status 0 (successful).
+ DEBUG [4cc9e264] Running /usr/bin/env ls /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest* on 3.83.40.117
+ DEBUG [4cc9e264] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && /usr/bin/env ls /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest*
+ DEBUG [4cc9e264] 	/home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest-53d0d81093336b93bc8c974418c1d533.json
+ DEBUG [4cc9e264] 	
+ DEBUG [4cc9e264] Finished in 0.307 seconds with exit status 0 (successful).
+  INFO [4a268891] Running /usr/bin/env cp /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest-53d0d81093336b93bc8c974418c1d533.json /home/ubuntu/apps/dashboard-gym/releases/20211119054722/assets_manifest_backup on 3.83.40.117
+ DEBUG [4a268891] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && /usr/bin/env cp /home/ubuntu/apps/dashboard-gym/releases/20211119054722/public/assets/.sprockets-manifest-53d0d81093336b93bc8c974418c1d533.json /home/ubuntu/apps/dashboard-gym/releases/20211119054722/assets_manifest_backup
+  INFO [4a268891] Finished in 0.233 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [f94b4235] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [f94b4235] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases/20211119054722; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases/20211119054722'" 1>&2; false; fi
+ DEBUG [f94b4235] Finished in 0.232 seconds with exit status 0 (successful).
+  INFO [c527caa5] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 3.83.40.117
+ DEBUG [c527caa5] Command: cd /home/ubuntu/apps/dashboard-gym/releases/20211119054722 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/type.rb:27: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/type/adapter_specific_registry.rb:9: warning: The called method `add_modifier' is defined here
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/postgresql/oid/specialized_string.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/transactions.rb:212: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/database_statements.rb:260: warning: The called method `transaction' is defined here
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/transaction.rb:171: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/transaction.rb:97: warning: The called method `initialize' is defined here
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/persistence.rb:705: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [c527caa5] 	
+ DEBUG [c527caa5] 	/home/ubuntu/apps/dashboard-gym/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/timestamp.rb:105: warning: The called method `_update_record' is defined here
+ DEBUG [c527caa5] 	
+  INFO [c527caa5] Finished in 4.344 seconds with exit status 0 (successful).
+  INFO [72e176ab] Running /usr/bin/env ln -s /home/ubuntu/apps/dashboard-gym/releases/20211119054722 /home/ubuntu/apps/dashboard-gym/releases/current on 3.83.40.117
+ DEBUG [72e176ab] Command: /usr/bin/env ln -s /home/ubuntu/apps/dashboard-gym/releases/20211119054722 /home/ubuntu/apps/dashboard-gym/releases/current
+  INFO [72e176ab] Finished in 0.304 seconds with exit status 0 (successful).
+  INFO [3068c01b] Running /usr/bin/env mv /home/ubuntu/apps/dashboard-gym/releases/current /home/ubuntu/apps/dashboard-gym on 3.83.40.117
+ DEBUG [3068c01b] Command: /usr/bin/env mv /home/ubuntu/apps/dashboard-gym/releases/current /home/ubuntu/apps/dashboard-gym
+  INFO [3068c01b] Finished in 0.303 seconds with exit status 0 (successful).
+ DEBUG [8856229c] Running /usr/bin/env ls -x /home/ubuntu/apps/dashboard-gym/releases on 3.83.40.117
+ DEBUG [8856229c] Command: /usr/bin/env ls -x /home/ubuntu/apps/dashboard-gym/releases
+ DEBUG [8856229c] 	20211119035314
+ DEBUG [8856229c] 		
+ DEBUG [8856229c] 	20211119054722
+ DEBUG [8856229c] 	
+ DEBUG [8856229c] Finished in 0.307 seconds with exit status 0 (successful).
+  INFO Keeping 1 of 2 deployed releases on 3.83.40.117
+ DEBUG [88b9a0fd] Running [ -d /home/ubuntu/apps/dashboard-gym/current ] on 3.83.40.117
+ DEBUG [88b9a0fd] Command: [ -d /home/ubuntu/apps/dashboard-gym/current ]
+ DEBUG [88b9a0fd] Finished in 0.307 seconds with exit status 0 (successful).
+ DEBUG [03389ae2] Running /usr/bin/env readlink /home/ubuntu/apps/dashboard-gym/current on 3.83.40.117
+ DEBUG [03389ae2] Command: /usr/bin/env readlink /home/ubuntu/apps/dashboard-gym/current
+ DEBUG [03389ae2] 	/home/ubuntu/apps/dashboard-gym/releases/20211119054722
+ DEBUG [03389ae2] 	
+ DEBUG [03389ae2] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [c71c5409] Running /usr/bin/env rm -rf /home/ubuntu/apps/dashboard-gym/releases/20211119035314 on 3.83.40.117
+ DEBUG [c71c5409] Command: /usr/bin/env rm -rf /home/ubuntu/apps/dashboard-gym/releases/20211119035314
+  INFO [c71c5409] Finished in 0.933 seconds with exit status 0 (successful).
+ DEBUG [f094f99a] Running if test ! -d /home/ubuntu/apps/dashboard-gym/current; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/current'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [f094f99a] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/current; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/current'" 1>&2; false; fi
+ DEBUG [f094f99a] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [6593dfc3] Running [ -f /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ] on 3.83.40.117
+ DEBUG [6593dfc3] Command: [ -f /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ]
+ DEBUG [6593dfc3] Finished in 0.196 seconds with exit status 0 (successful).
+ DEBUG [c549f4a5] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ) on 3.83.40.117
+ DEBUG [c549f4a5] Command: cd /home/ubuntu/apps/dashboard-gym/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ) )
+ DEBUG [c549f4a5] Finished in 0.265 seconds with exit status 0 (successful).
+  INFO [dede7aef] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.state -F /home/ubuntu/apps/dashboard-gym/shared/puma.rb restart on 3.83.40.117
+ DEBUG [dede7aef] Command: cd /home/ubuntu/apps/dashboard-gym/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.state -F /home/ubuntu/apps/dashboard-gym/shared/puma.rb restart )
+ DEBUG [dede7aef] 	Command restart sent success
+ DEBUG [dede7aef] 	
+  INFO [dede7aef] Finished in 1.182 seconds with exit status 0 (successful).
+ DEBUG [fa1a656e] Running if test ! -d /home/ubuntu/apps/dashboard-gym/releases; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [fa1a656e] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/releases; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/releases'" 1>&2; false; fi
+ DEBUG [fa1a656e] Finished in 0.240 seconds with exit status 0 (successful).
+  INFO [6bde1457] Running /usr/bin/env echo "Branch master (at 7e60baaf0ae5f38d9622c0c5090f590fb8d0adbc) deployed as release 20211119054722 by fernando" >> /home/ubuntu/apps/dashboard-gym/revisions.log on 3.83.40.117
+ DEBUG [6bde1457] Command: cd /home/ubuntu/apps/dashboard-gym/releases && /usr/bin/env echo "Branch master (at 7e60baaf0ae5f38d9622c0c5090f590fb8d0adbc) deployed as release 20211119054722 by fernando" >> /home/ubuntu/apps/dashboard-gym/revisions.log
+  INFO [6bde1457] Finished in 0.199 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-11-19 00:09:29 -0600 cap production puma:restart
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4fec36bd] Running [ -d ~/.rvm ] on 3.83.40.117
+ DEBUG [4fec36bd] Command: [ -d ~/.rvm ]
+ DEBUG [4fec36bd] Finished in 1.878 seconds with exit status 0 (successful).
+ DEBUG [f9394e11] Running ~/.rvm/bin/rvm version on 3.83.40.117
+ DEBUG [f9394e11] Command: ~/.rvm/bin/rvm version
+ DEBUG [f9394e11] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [f9394e11] 	
+ DEBUG [f9394e11] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [daa3b66b] Running ~/.rvm/bin/rvm current on 3.83.40.117
+ DEBUG [daa3b66b] Command: ~/.rvm/bin/rvm current
+ DEBUG [daa3b66b] 	ruby-2.7.0
+ DEBUG [daa3b66b] 	
+ DEBUG [daa3b66b] Finished in 0.374 seconds with exit status 0 (successful).
+ DEBUG [3cdf3802] Running ~/.rvm/bin/rvm default do ruby --version on 3.83.40.117
+ DEBUG [3cdf3802] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [3cdf3802] 	ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ DEBUG [3cdf3802] 	
+ DEBUG [3cdf3802] Finished in 0.577 seconds with exit status 0 (successful).
+ DEBUG [7d76968a] Running if test ! -d /home/ubuntu/apps/dashboard-gym/current; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/current'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [7d76968a] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/current; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/current'" 1>&2; false; fi
+ DEBUG [7d76968a] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [e177011c] Running [ -f /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ] on 3.83.40.117
+ DEBUG [e177011c] Command: [ -f /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ]
+ DEBUG [e177011c] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [d55698b4] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ) on 3.83.40.117
+ DEBUG [d55698b4] Command: cd /home/ubuntu/apps/dashboard-gym/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ) )
+ DEBUG [d55698b4] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [68363cbe] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.state -F /home/ubuntu/apps/dashboard-gym/shared/puma.rb restart on 3.83.40.117
+ DEBUG [68363cbe] Command: cd /home/ubuntu/apps/dashboard-gym/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.state -F /home/ubuntu/apps/dashboard-gym/shared/puma.rb restart )
+ DEBUG [68363cbe] 	Command restart sent success
+ DEBUG [68363cbe] 	
+  INFO [68363cbe] Finished in 1.492 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-11-19 00:10:34 -0600 cap production puma:restart
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b03a7f14] Running [ -d ~/.rvm ] on 3.83.40.117
+ DEBUG [b03a7f14] Command: [ -d ~/.rvm ]
+ DEBUG [b03a7f14] Finished in 1.310 seconds with exit status 0 (successful).
+ DEBUG [45aadf93] Running ~/.rvm/bin/rvm version on 3.83.40.117
+ DEBUG [45aadf93] Command: ~/.rvm/bin/rvm version
+ DEBUG [45aadf93] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [45aadf93] 	
+ DEBUG [45aadf93] Finished in 0.449 seconds with exit status 0 (successful).
+ DEBUG [bc900261] Running ~/.rvm/bin/rvm current on 3.83.40.117
+ DEBUG [bc900261] Command: ~/.rvm/bin/rvm current
+ DEBUG [bc900261] 	ruby-2.7.0
+ DEBUG [bc900261] 	
+ DEBUG [bc900261] Finished in 0.375 seconds with exit status 0 (successful).
+ DEBUG [a8e7c639] Running ~/.rvm/bin/rvm default do ruby --version on 3.83.40.117
+ DEBUG [a8e7c639] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [a8e7c639] 	ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ DEBUG [a8e7c639] 	
+ DEBUG [a8e7c639] Finished in 0.584 seconds with exit status 0 (successful).
+ DEBUG [b184a7b7] Running if test ! -d /home/ubuntu/apps/dashboard-gym/current; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/current'" 1>&2; false; fi on 3.83.40.117
+ DEBUG [b184a7b7] Command: if test ! -d /home/ubuntu/apps/dashboard-gym/current; then echo "Directory does not exist '/home/ubuntu/apps/dashboard-gym/current'" 1>&2; false; fi
+ DEBUG [b184a7b7] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [152a7230] Running [ -f /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ] on 3.83.40.117
+ DEBUG [152a7230] Command: [ -f /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ]
+ DEBUG [152a7230] Finished in 0.234 seconds with exit status 0 (successful).
+ DEBUG [6d9ccb29] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ) on 3.83.40.117
+ DEBUG [6d9ccb29] Command: cd /home/ubuntu/apps/dashboard-gym/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.pid ) )
+ DEBUG [6d9ccb29] Finished in 0.196 seconds with exit status 0 (successful).
+  INFO [6782cf95] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.state -F /home/ubuntu/apps/dashboard-gym/shared/puma.rb restart on 3.83.40.117
+ DEBUG [6782cf95] Command: cd /home/ubuntu/apps/dashboard-gym/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/apps/dashboard-gym/shared/tmp/pids/puma.state -F /home/ubuntu/apps/dashboard-gym/shared/puma.rb restart )
+ DEBUG [6782cf95] 	Command restart sent success
+ DEBUG [6782cf95] 	
+  INFO [6782cf95] Finished in 1.203 seconds with exit status 0 (successful).

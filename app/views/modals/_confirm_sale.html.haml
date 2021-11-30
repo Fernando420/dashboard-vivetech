@@ -1,0 +1,21 @@
+#modalConfirmSale.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", role: "dialog", tabindex: "-1"}
+
+  %div.modal-dialog.modal-dialog-centered{role: "document"}
+    %div.modal-content
+      %div.customize-modal
+        %div.modal-header
+          %button.close{type: "button", 'data-dismiss' => "modal", 'aria-label' => "Close"}
+            %span{'aria-hidden': "true"} &times;
+        %div.modal-body
+          %h1#body-tittle.body-tittle= t('modals.sale')
+          %h1.body= t('sales.amount_total')
+          %h1.body-subtitle{id: "amount_total"}
+          %h1.body= t('common_texts.total_items')
+          %h1.body-subtitle{id: "total_products"}
+          %h1.body= t('common_texts.member')
+          %h1.body-subtitle{id: "member_id_modal"}
+
+        %div.modal-footer
+          %button.btn.btn-login{id: 'send_sale_modal'}
+            = t('buttons.save')
+

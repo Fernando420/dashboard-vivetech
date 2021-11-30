@@ -1,0 +1,9 @@
+%tr
+  %td= product['name']
+  %td= product['description']
+  %td= product['status']
+  %td= product['total']
+  %td= product['correct']
+  %td= product['incorrect']
+  %td
+    %a.link-table{href: "/products/#{product['id']}"}=t('buttons.show') 

@@ -1,0 +1,50 @@
+en:
+  sidebar:
+    menu_1: 
+      title: 'Home'
+    menu_2: 
+      title: "Product"
+      submenu_1: 'Register'
+      submenu_2: 'List'
+  common_texts:
+    home: 'Home'
+    name: 'Name'
+    date_create: 'Created At'
+    description: 'Description'
+  status:
+    process: 'Process'
+    processing: 'Processing'
+  products:
+    new: 'New Product'
+    edit: 'Edit Products'
+    list: 'List Product'
+    show: 'Show Product'
+  login:
+    privacy: 'Privacy policy and legal terms'
+    faq: 'FAQ`s'
+    title: 'Gym Management System'
+    forgot-password: 'Forgot Password?'
+  buttons: 
+    save: 'Save'
+    back: 'Back'
+    continue: 'Continue'
+    show: 'Show'
+    edit: 'Edit'
+    valid: "Valid?"
+    access: "Access"
+    search: "Search"
+    delete: 'Delete'
+    generate: 'Generate'
+  modals:
+    success: 'Successfully'
+    error: "Error"
+    confirm: "Confirmation"
+    access: 'Accesses'
+    sale: 'Sale Confirm'
+  errors:
+    username: 'Enter a valid username'
+    password: 'Minimum six characters, at least one uppercase letter, one lowercase letter, one number and one special character'
+    email: 'Enter a valid email'
+    phone: 'Enter a valid phone, phone must have only numbers'
+    age: 'Enter a valid age, age must have only numbers'
+    confirmPassword: "The password and password of confirmation must be equal"

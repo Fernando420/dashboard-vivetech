@@ -1,0 +1,41 @@
+%nav#sidebar
+  %div.sidebar-header{align: "center"}
+    %div{style: 'background: linear-gradient(to bottom,#BCDB00,#A0BA00,#839800,#5E6E00);'}
+      %div.logo
+        = image_tag 'sidebar/missing.png'
+        %h5= @current_user['username']
+        %h2 
+          ID:
+          = @current_user['id']
+
+    %div.col-12.logomenu.nopadding
+      %div.container
+        %ul.list-unstyled.components{style: "margin-top:20px"}
+
+          %li.only{style: "margin-top:10px;"}
+            %a#Home.link-home{href: "/"}
+              = image_tag 'sidebar/home.svg', class: 'sidebar-button-img' 
+              %strong= t('sidebar.menu_1.title')
+
+            %li{style: "margin-top:10px;"}
+              %a.dropdown-toggle.sidebar-button.link-home{href: "#Product", 'data-toggle': "collapse", 'aria-expanded': "false"}
+                = image_tag 'sidebar/product.png', class: 'sidebar-button-img'
+                %strong= t('sidebar.menu_2.title')
+                  
+              %ul#Product.collapse.list-unstyled
+                %li
+                  %a#register.sidebar-button.link-home{href: "/products/new"}
+                    = image_tag 'sidebar/dot-gray.png', class: 'sidebar-button-bullet'
+                    %strong= t('sidebar.menu_2.submenu_1')      
+                %li
+                  %a#list.sidebar-button.link-home{href: "/products"}
+                    = image_tag 'sidebar/dot-gray.png', class: 'sidebar-button-bullet'
+                    %strong= t('sidebar.menu_2.submenu_2')
+
+
+          %li.only{style: "margin-top:400px;"}
+  
+          %li{style: "margin-top:10px"}
+            = link_to logout_sessions_path, method: :delete, class: 'sidebar-button font-white', id: 'logout-button' do
+              = image_tag 'sidebar/logout.png', class: 'sidebar-button-img'
+              = t('sidebar.logout')

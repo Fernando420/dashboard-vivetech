@@ -1,0 +1,26 @@
+.del_variant{id: "variant_#{child_index}"}  
+  .m-1.p-1.border.rounded.box
+    %div.row
+      %div.form-group.col-4
+        %strong#error-name.error-msg
+          = text_field_tag 'variants[][name]',nil, {class: 'form-input', required: true,id:"name"}
+          %label.form-label{for: "name"}= t('common_texts.name')
+          %p#text-name.hide= t('errors.name')
+    
+      %div.form-group.col-4
+        %strong#error-price.error-msg
+          = number_field_tag 'variants[][price]',nil, {class: 'form-input', required: true,id:"price", step: 0.0001}
+          %label.form-label{for: "price"}= t('common_texts.price')
+          %p#text-price.hide= t('errors.price')
+
+      %b
+        %a.delete_variant{data: {div_id: "variant_#{child_index}"}}
+          =image_tag('icons/delete.png')
+
+:javascript
+
+  $('.delete_variant').on('click', function(){
+    console.log('entreo')
+    var div_id = $(this).data('div-id');
+    $("#" + div_id).remove();
+  });

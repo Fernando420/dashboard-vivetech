@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: dashboard_vivetech_development
+test:
+  <<: *default
+  database: dashboard_vivetech_test
+production:
+  <<: *default
+  database: dashboard_vivetech_prod

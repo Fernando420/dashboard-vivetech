@@ -1,0 +1,188 @@
+@import '../../assets/stylesheets/tools/utilities';
+@import '../../assets/stylesheets/tools/variables';
+@import 'bootstrap';
+@import 'sessions';
+@import 'modals';
+@import 'sidebar';
+@import 'topbar';
+@import 'home';
+@import 'datatables';
+@import 'products';
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap');
+
+$monserrat: 'Montserrat', sans-serif;
+
+%btn-extender {
+  @extend .btn-submit;
+  @extend .btn-login;
+}
+
+h1{
+  color: #5E6E00;
+}
+
+h4{
+  color: #839800;
+}
+
+.font-white{
+  color: white;
+}
+
+form {
+  input[type="submit"] {
+    @extend %btn-extender;
+  }
+}
+
+#new_membership{
+  border: 2px green solid
+}
+#active{
+  border: 2px green solid
+}
+#expired{
+  border: 2px orange solid
+}
+#suspend{
+  border: 2px red solid
+}
+
+.card{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding: 29px;
+    .text-title{
+        text-align: center;
+        font-size: 20px;
+        font-family: $monserrat;
+        font-weight: 100;
+        color: rgba(128, 128, 128, 0.598);
+    }
+    .text-data{
+        font-size: 15px ;
+        font-weight: 400;
+        color: black;
+        font-family: $monserrat;
+        .text-resp{
+            font-size: 12px;
+            font-weight: 100;
+            font-family: $monserrat;
+        }
+    }    
+}
+
+footer{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.row{
+  display: flex;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.btn{
+  width: 150px;
+  height: 25px;
+}
+
+.btn-submit{
+  margin: 15px;
+  width: 150px;
+  height: 40px;
+}
+
+.btn-login{
+  background-color: #A0BA00;
+  color: white;
+  font-size: 10px;
+  font-family: $monserrat;
+  font-weight: bolder;
+}
+
+.link-table{
+  color: #A0BA00;
+  font-weight: bold;
+}
+
+.btn-white{
+  background-color: white;
+  color: black;
+  font-size: 10px;
+  font-family: $monserrat;
+  font-weight: bolder;
+}
+
+.btn-link{
+  background-color: #A0BA00;
+  color: white;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+}
+
+.btn-home{
+  width: 100px !important;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-family: $monserrat;
+  font-weight: bolder;
+}
+
+.form-group {
+  position:relative;
+  margin-bottom: 0 !important;
+}
+
+.main-container{
+  @extend %grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90vh;
+}
+  
+.main-grid{
+  @extend %grid;
+  grid-template-columns: 244px 940px;
+  grid-template-rows: 101.5px 101.5px 112px 1fr;
+  grid-row-gap: $column-separator*0;
+  justify-self: center;
+} 
+
+.container-nav{
+    grid-row: 1 / span 4;
+    background: white;
+    width: 10px
+}
+
+.autoscroll{
+    overflow: hidden;
+}
+
+.autoscroll:hover{
+    overflow: auto;
+}
+
+input:checked{
+    background-color: red;
+}
+
+.btn-lg{
+    width: 150px;
+    height: 36px;
+    font-size: 12px;
+    font-family: $monserrat;
+    font-weight: 100;
+}
+
+.margin15{
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
