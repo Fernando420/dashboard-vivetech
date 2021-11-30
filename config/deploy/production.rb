@@ -1,5 +1,5 @@
 # Change these
-server '3.83.40.117', port: 22, roles: [:web, :app, :db], primary: true
+server '52.91.251.230', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Fernando420/Dashboard-Vivetech.git'
 set :application,     'dashboard-vivetech'
@@ -23,7 +23,7 @@ set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
 set :puma_error_log,  "#{release_path}/log/puma.access.log"
 # set :ssh_options,     {forward_agent: true, user: fetch(:user), keys: %w(/Users/torvik/Documents/Credenciales/Aws/Extra/all-general.pem)}
-set :ssh_options,     {forward_agent: true, user: fetch(:user), keys: %w(/home/fernando/Documents/Credenciales/Test/all-general.pem)}
+set :ssh_options,     {forward_agent: true, user: fetch(:user), keys: %w(/home/fernando/Documents/Credenciales/Gym/all-general.pem)}
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord

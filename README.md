@@ -1,24 +1,16 @@
-# README
+# Ruby on Rails Panel Dashboard
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application are a Panel Dashboard
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+* Ruby		2.7.0
+* Rails 	13.0.6
 
-* System dependencies
+## Install & Run project
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ bundle install
+$ rails db:create
+$ rails server
+```
