@@ -22,7 +22,7 @@ en:
   login:
     privacy: 'Privacy policy and legal terms'
     faq: 'FAQ`s'
-    title: 'Gym Management System'
+    title: 'Products Management System'
     forgot-password: 'Forgot Password?'
   buttons: 
     save: 'Save'

@@ -23,7 +23,7 @@ es:
   login:
     privacy: 'Política de privacidad y términos legales'
     faq: 'FAQ`s'
-    title: 'Sistema de Gestión de Gimnasio'
+    title: 'Sistema de Gestión de Productos'
     forgot-password: 'Olvide contraseña?'
   buttons: 
     save: 'Guardar'
